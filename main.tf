@@ -59,11 +59,10 @@ resource "vsphere_virtual_machine" "vm" {
   datastore_id     = "${data.vsphere_datastore.datastore.id}"
 
   num_cpus = 1
-  memory   = 1024
+  memory   = 2048
   guest_id = "ubuntu64Guest"
 
   ignored_guest_ips = []
-
 
   network_interface {
     network_id = "${data.vsphere_network.network.id}"
